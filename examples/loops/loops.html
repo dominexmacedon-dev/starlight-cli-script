@@ -80,7 +80,7 @@ while (i < 5) {
         <h2>2. For Loop</h2>
         <pre><code>
 # Loop with initialization, condition, increment
-for (define i = 0; i < 5; i = i + 1) {
+for (let i = 0; i < 5; i = i + 1) {
 
     # Print current iteration
     sldeploy "i: " + i;
@@ -109,7 +109,7 @@ for item in arr {
         <h2>4. Break Statement</h2>
         <pre><code>
 # Loop with break condition
-for (define i = 0; i < 10; i = i + 1) {
+for (let i = 0; i < 10; i = i + 1) {
 
     # Stop loop when i equals 5
     if (i == 5) {
@@ -127,7 +127,7 @@ for (define i = 0; i < 10; i = i + 1) {
         <h2>5. Continue Statement</h2>
         <pre><code>
 # Loop with continue
-for (define i = 0; i < 5; i = i + 1) {
+for (let i = 0; i < 5; i = i + 1) {
 
     # Skip when i equals 2
     if (i == 2) {
@@ -139,7 +139,80 @@ for (define i = 0; i < 5; i = i + 1) {
 }
         </code></pre>
     </section>
+<section>
+    <h2>6. Nested Loops</h2>
+    <pre><code>
+# Outer loop runs 3 times
+for (let i = 0; i < 3; i = i + 1) {
 
+    # Inner loop runs 2 times for each outer iteration
+    for (let j = 0; j < 2; j = j + 1) {
+
+        # Print both counters
+        sldeploy "i: " + i + ", j: " + j;
+    }
+}
+    </code></pre>
+</section>
+    <section>
+    <h2>7. For-In Loop (Object)</h2>
+    <pre><code>
+# Create an object
+let user = {
+    "name": "Alice",
+    "age": 25
+};
+
+# Iterate over keys
+for key in user {
+
+    # Access value using key
+    sldeploy key + ": " + user[key];
+}
+    </code></pre>
+</section>
+    <section>
+    <h2>8. Infinite Loop with Break</h2>
+    <pre><code>
+# Infinite loop
+while (true) {
+
+    # Generate random number
+    let n = random(1, 10);
+
+    sldeploy "Number: " + n;
+
+    # Exit condition
+    if (n == 5) {
+        break;
+    }
+}
+    </code></pre>
+</section>
+    <section>
+    <h2>9. Reverse Loop</h2>
+    <pre><code>
+# Loop backwards
+for (let i = 5; i > 0; i = i - 1) {
+
+    # Countdown output
+    sldeploy "i: " + i;
+}
+    </code></pre>
+</section>
+    <section>
+    <h2>10. Conditional Loop (Even Numbers)</h2>
+    <pre><code>
+# Loop numbers 0 to 10
+for (let i = 0; i <= 10; i = i + 1) {
+
+    # Print only even numbers
+    if (i % 2 == 0) {
+        sldeploy "Even: " + i;
+    }
+}
+    </code></pre>
+</section>
 </div>
 
 </body>
