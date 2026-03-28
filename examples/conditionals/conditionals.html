@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Conditionals Guide – If, Else, Ternary, Logical Operators</title>
+
+    <meta name="description" content="Learn conditional statements in Starlight programming language including if, else, nested conditions, ternary operator and logical expressions.">
+    <meta name="keywords" content="starlight conditionals, if else starlight, ternary operator scripting, logical operators programming">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+
+        pre {
+            background: #020617;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Starlight Conditionals Guide</h1>
+    <p>Learn how decision-making works in the Starlight programming language</p>
+</header>
+
+<div class="container">
+
+    <!-- 1 -->
+    <section>
+        <h2>1. Basic If Statement</h2>
+        <pre><code>
+# Define a variable
+let age = 20;
+
+# Check condition
+if (age > 18) {
+
+    # Runs if condition is true
+    sldeploy "Adult";
+}
+        </code></pre>
+    </section>
+
+    <!-- 2 -->
+    <section>
+        <h2>2. If-Else Statement</h2>
+        <pre><code>
+# Define value
+let number = 5;
+
+# Check even or odd
+if (number % 2 == 0) {
+
+    sldeploy "Even";
+
+} else {
+
+    # Runs if condition is false
+    sldeploy "Odd";
+}
+        </code></pre>
+    </section>
+
+    <!-- 3 -->
+    <section>
+        <h2>3. Nested If Statements</h2>
+        <pre><code>
+# Define values
+let age = 25;
+let hasID = true;
+
+# Nested condition
+if (age > 18) {
+
+    # Second condition inside
+    if (hasID) {
+        sldeploy "Access granted";
+    } else {
+        sldeploy "ID required";
+    }
+
+} else {
+    sldeploy "Underage";
+}
+        </code></pre>
+    </section>
+
+    <!-- 4 -->
+    <section>
+        <h2>4. Ternary Operator</h2>
+        <pre><code>
+# Define number
+let num = 10;
+
+# Short conditional expression
+let result = (num > 5) ? "Greater" : "Smaller";
+
+sldeploy result;
+        </code></pre>
+    </section>
+
+    <!-- 5 -->
+    <section>
+        <h2>5. Logical Operators</h2>
+        <pre><code>
+# Define values
+let age = 20;
+let hasTicket = true;
+
+# AND logic (age > 18 AND hasTicket)
+if (age > 18) {
+
+    if (hasTicket) {
+        sldeploy "Entry allowed";
+    }
+
+}
+
+# OR logic (age < 18 OR hasTicket)
+if (age < 18) {
+
+    sldeploy "Partial access";
+
+} else {
+
+    if (hasTicket) {
+        sldeploy "Partial access";
+    }
+
+}
+        </code></pre>
+    </section>
+
+    <!-- 6 -->
+    <section>
+        <h2>6. Null Coalescing Operator</h2>
+        <pre><code>
+# Value may be null
+let value = null;
+
+# Provide default
+let result = value ?? "Default Value";
+
+sldeploy result;
+        </code></pre>
+    </section>
+
+    <!-- 7 -->
+    <section>
+        <h2>7. Complex Conditions</h2>
+        <pre><code>
+# Define values
+let score = 85;
+let passed = true;
+
+# First condition
+if (score > 90) {
+
+    sldeploy "Excellent";
+
+} else {
+
+    # Second condition
+    if (score > 80) {
+
+        if (passed) {
+            sldeploy "Excellent";
+        } else {
+            sldeploy "Average";
+        }
+
+    } else {
+        sldeploy "Average";
+    }
+}
+        </code></pre>
+    </section>
+
+    <!-- 8 -->
+    <section>
+        <h2>8. Switch-like (Start Statement)</h2>
+        <pre><code>
+# Define value
+let day = 2;
+
+# Start statement
+start (day) {
+
+    race 1 {
+        sldeploy "Monday";
+        break;
+    }
+
+    race 2 {
+        sldeploy "Tuesday";
+        break;
+    }
+
+    race 3 {
+        sldeploy "Wednesday";
+        break;
+    }
+}
+        </code></pre>
+    </section>
+
+    <!-- 9 -->
+    <section>
+        <h2>9. Condition with Function</h2>
+        <pre><code>
+# Function to check value
+func isPositive(x) {
+    return x > 0;
+}
+
+let num = -5;
+
+if (isPositive(num)) {
+    sldeploy "Positive";
+} else {
+    sldeploy "Negative";
+}
+        </code></pre>
+    </section>
+
+    <!-- 10 -->
+    <section>
+        <h2>10. Guard Clause Pattern</h2>
+        <pre><code>
+# Function with early return
+func checkAge(age) {
+
+    # Exit early if invalid
+    if (age < 0) {
+        sldeploy "Invalid age";
+        return;
+    }
+
+    if (age >= 18) {
+        sldeploy "Adult";
+    } else {
+        sldeploy "Minor";
+    }
+}
+
+checkAge(20);
+        </code></pre>
+    </section>
+
+</div>
+
+</body>
+</html>
