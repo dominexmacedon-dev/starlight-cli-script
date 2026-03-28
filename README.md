@@ -39,7 +39,7 @@ node starlight.js file.sl
 ## Example
 
 ```sl
-print("Hello, Starlight")
+sldeploy("Hello, Starlight")
 ```
 
 ---
