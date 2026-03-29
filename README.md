@@ -1,8 +1,28 @@
 # Starlight Language (starlight-programming-lang)
 
+<p align="center">
+  <img src="starlight-lang-logo.png" alt="Starlight Language Logo" width="320"/>
+</p>
+
 **Starlight Language** is a lightweight server-side scripting programming language built with JavaScript. It provides a custom interpreter and command-line interface (CLI) runtime for executing `.sl` scripts.
 
 This project is designed for learning, experimentation, and understanding how programming languages and interpreters work internally.
+
+---
+
+## Logo Variants
+
+<p align="center">
+  <img src="starlight-lang-logo.png" alt="Starlight Logo Large" width="300"/>
+</p>
+
+<p align="center">
+  <img src="starlight-lang-logo.png" alt="Starlight Logo Medium" width="180"/>
+</p>
+
+<p align="center">
+  <img src="starlight-lang-logo.png" alt="Starlight Logo Small" width="100"/>
+</p>
 
 ---
 
@@ -26,7 +46,7 @@ Run a Starlight script:
 
 ```bash
 starlight file.sl
-```
+````
 
 Or using Node.js directly:
 
@@ -39,7 +59,7 @@ node starlight.js file.sl
 ## Example
 
 ```sl
-sldeploy("Hello, Starlight")
+sldeploy("Hello, Starlight");
 ```
 
 ---
