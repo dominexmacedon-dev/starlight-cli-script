@@ -13,15 +13,74 @@ This project is designed for learning, experimentation, and understanding how pr
 ## Logo Variants
 
 <p align="center">
-  <img src="starlight-lang-logo.png" alt="Starlight Logo Large" width="300"/>
+  <img src="starlight-lang-logo.png" width="300"/>
 </p>
 
 <p align="center">
-  <img src="starlight-lang-logo.png" alt="Starlight Logo Medium" width="180"/>
+  <img src="starlight-lang-logo.png" width="180"/>
 </p>
 
 <p align="center">
-  <img src="starlight-lang-logo.png" alt="Starlight Logo Small" width="100"/>
+  <img src="starlight-lang-logo.png" width="100"/>
+</p>
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/Screenshot (610).png" width="700"/>
+  <img src="screenshots/Screenshot (611).png" width="700"/>
+  <img src="screenshots/Screenshot (612).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (614).png" width="700"/>
+  <img src="screenshots/Screenshot (615).png" width="700"/>
+  <img src="screenshots/Screenshot (616).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (617).png" width="700"/>
+  <img src="screenshots/Screenshot (618).png" width="700"/>
+  <img src="screenshots/Screenshot (619).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (620).png" width="700"/>
+  <img src="screenshots/Screenshot (621).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (623).png" width="700"/>
+  <img src="screenshots/Screenshot (624).png" width="700"/>
+  <img src="screenshots/Screenshot (625).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (626).png" width="700"/>
+  <img src="screenshots/Screenshot (627).png" width="700"/>
+  <img src="screenshots/Screenshot (628).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (629).png" width="700"/>
+  <img src="screenshots/Screenshot (630).png" width="700"/>
+  <img src="screenshots/Screenshot (631).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (632).png" width="700"/>
+  <img src="screenshots/Screenshot (633).png" width="700"/>
+  <img src="screenshots/Screenshot (634).png" width="700"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/Screenshot (635).png" width="700"/>
+  <img src="screenshots/Screenshot (636).png" width="700"/>
+  <img src="screenshots/Screenshot (637).png" width="700"/>
+  <img src="screenshots/Screenshot (639).png" width="700"/>
+  <img src="screenshots/Screenshot (640).png" width="700"/>
 </p>
 
 ---
@@ -40,15 +99,25 @@ Starlight Language is focused on simplicity and clarity. It demonstrates the ful
 
 ---
 
+## Installation
+
+Install globally using npm:
+
+```bash
+npm install -g starlight-cli
+````
+
+---
+
 ## Quick Start
 
 Run a Starlight script:
 
 ```bash
 starlight file.sl
-````
+```
 
-Or using Node.js directly:
+Or using Node.js:
 
 ```bash
 node starlight.js file.sl
@@ -66,15 +135,13 @@ sldeploy("Hello, Starlight");
 
 ## Execution Pipeline
 
-The Starlight interpreter follows a structured execution pipeline:
-
-| Stage      | File           | Description                          |
-| ---------- | -------------- | ------------------------------------ |
-| Input      | `.sl` file     | Source code                          |
-| Lexing     | `lexer.js`     | Converts source code into tokens     |
-| Parsing    | `parser.js`    | Builds an Abstract Syntax Tree (AST) |
-| Evaluation | `evaluator.js` | Executes the AST                     |
-| Output     | —              | Final program result                 |
+| Stage      | File           | Description                       |
+| ---------- | -------------- | --------------------------------- |
+| Input      | `.sl` file     | Source code                       |
+| Lexing     | `lexer.js`     | Converts source code into tokens  |
+| Parsing    | `parser.js`    | Builds Abstract Syntax Tree (AST) |
+| Evaluation | `evaluator.js` | Executes AST                      |
+| Output     | —              | Final result                      |
 
 ---
 
@@ -86,6 +153,8 @@ starlight-language/
 ├── parser.js
 ├── evaluator.js
 ├── starlight.js
+├── examples/
+├── screenshots/
 └── README.md
 ```
 
@@ -97,51 +166,49 @@ starlight-language/
 
 | Responsibility | Details                                    |
 | -------------- | ------------------------------------------ |
-| Tokenization   | Converts source code into tokens           |
-| Recognizes     | Keywords, operators, identifiers, literals |
+| Tokenization   | Converts source into tokens                |
+| Recognition    | Keywords, operators, identifiers, literals |
 | Output         | Token stream                               |
 
 ---
 
 ### Parser (`parser.js`)
 
-| Responsibility  | Details                     |
-| --------------- | --------------------------- |
-| Syntax Analysis | Validates program structure |
-| Transformation  | Converts tokens into AST    |
-| Output          | Abstract Syntax Tree        |
+| Responsibility  | Details              |
+| --------------- | -------------------- |
+| Syntax Analysis | Validates structure  |
+| Transformation  | Tokens → AST         |
+| Output          | Abstract Syntax Tree |
 
 ---
 
 ### Evaluator (`evaluator.js`)
 
-| Responsibility   | Details                            |
-| ---------------- | ---------------------------------- |
-| Execution        | Interprets AST nodes               |
-| Runtime Behavior | Handles expressions and statements |
-| Output           | Program result                     |
+| Responsibility   | Details                |
+| ---------------- | ---------------------- |
+| Execution        | Interprets AST         |
+| Runtime Behavior | Handles logic and flow |
+| Output           | Program result         |
 
 ---
 
 ### CLI Runtime (`starlight.js`)
 
-| Responsibility | Details                               |
-| -------------- | ------------------------------------- |
-| Entry Point    | Handles CLI execution                 |
-| File Handling  | Reads `.sl` files                     |
-| Integration    | Connects lexer, parser, and evaluator |
+| Responsibility | Details                 |
+| -------------- | ----------------------- |
+| Entry Point    | CLI execution           |
+| File Handling  | Reads `.sl` scripts     |
+| Integration    | Connects all components |
 
 ---
 
 ## Use Cases
 
-Starlight Language is suitable for:
-
-| Use Case          | Description                            |
-| ----------------- | -------------------------------------- |
-| Learning          | Understanding interpreter architecture |
-| Backend Scripting | Running command-line scripts           |
-| Experimentation   | Testing language design concepts       |
+| Use Case          | Description             |
+| ----------------- | ----------------------- |
+| Learning          | Understand interpreters |
+| Backend Scripting | CLI automation          |
+| Experimentation   | Language design testing |
 
 ---
 
@@ -149,7 +216,7 @@ Starlight Language is suitable for:
 
 * Build a simple and understandable programming language
 * Demonstrate interpreter architecture
-* Provide a foundation for extending language features
+* Provide a base for future extensions
 
 ---
 
@@ -169,32 +236,22 @@ Starlight Language is suitable for:
 ## Concepts Covered
 
 * Programming language design
-* Lexical analysis (tokenization)
-* Parsing and Abstract Syntax Trees (AST)
-* Interpretation and execution
+* Lexical analysis
+* Parsing and AST
+* Interpretation
 * CLI tool development
 
 ---
 
 ## Keywords
 
-Starlight Language is associated with the following topics:
-
-* programming language
-* scripting language
-* interpreter
-* compiler design
-* abstract syntax tree
-* lexer
-* parser
-* language development
-* CLI runtime
+starlight language, scripting language, interpreter, compiler design, AST, lexer, parser, CLI runtime, programming language development
 
 ---
 
 ## Contributing
 
-Contributions are welcome. You can:
+Contributions are welcome:
 
 * Fork the repository
 * Submit improvements
@@ -205,3 +262,4 @@ Contributions are welcome. You can:
 ## License
 
 This project is open-source and intended for educational and experimental use.
+ 
